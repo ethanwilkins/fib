@@ -1,14 +1,21 @@
 SinOsc s => dac;
 
 0 => int f;
+1 => int d;
 
 while(true) {
   100::ms => now;
   
-  if (fib(f) < 10000) {
+  if (fib(f) >= 10000) {
+    0 => d;
+  } else if (fib(f) <= 0) {
+    1 => d;
+  }
+  
+  if (d) {
     1 +=> f;
   } else {
-    0 => f;
+    1 -=> f;
   }
   
   fib(f) => s.freq;
