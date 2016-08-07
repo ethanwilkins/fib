@@ -1,6 +1,8 @@
 SinOsc s => dac;
 
+// frequency
 0 => int f;
+// direction (add or subtract to frequency)
 1 => int d;
 
 while(true) {
