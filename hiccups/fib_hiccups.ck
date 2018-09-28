@@ -20,9 +20,14 @@ while(true) {
     1 -=> f;
   }
 
-  fib(f) => s.freq;
+  // range length
+  100 => int r;
+  // creates random f within range length
+  Math.random2(fib(f) - r, fib(f) + r) => int f_ran;
 
-  <<< fib(f) >>>;
+  f_ran => s.freq;
+
+  <<< f_ran >>>;
 }
 
 fun int fib(int n) {

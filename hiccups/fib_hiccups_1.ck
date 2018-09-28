@@ -26,6 +26,13 @@ while(true) {
 }
 
 fun int fib(int n) {
+
+  // range length
+  2 => int r;
+  // creates rand within range length
+  Math.random2(n - r, n + r) => n;
+
+
   if (n == 0) {
     return 0;
   }
